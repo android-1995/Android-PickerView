@@ -1,7 +1,10 @@
 package com.bigkoo.pickerview.builder;
 
 import android.content.Context;
+
 import androidx.annotation.ColorInt;
+
+import android.graphics.Typeface;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -243,6 +246,11 @@ public class TimePickerBuilder {
      */
     public TimePickerBuilder setTextColorOut(@ColorInt int textColorOut) {
         mPickerOptions.textColorOut = textColorOut;
+        return this;
+    }
+
+    public TimePickerBuilder setTypeface(Typeface font) {
+        mPickerOptions.font = font;
         return this;
     }
 

@@ -1,5 +1,6 @@
 package com.bigkoo.pickerview.view;
 
+import android.graphics.Typeface;
 import android.view.View;
 
 import com.bigkoo.pickerview.R;
@@ -642,6 +643,20 @@ public class WheelTime {
         wv_hours.setCyclic(cyclic);
         wv_minutes.setCyclic(cyclic);
         wv_seconds.setCyclic(cyclic);
+    }
+
+    /**
+     * 设置字体样式
+     *
+     * @param font 系统提供的几种样式
+     */
+    public void setTypeface(Typeface font) {
+        wv_year.setTypeface(font);
+        wv_month.setTypeface(font);
+        wv_day.setTypeface(font);
+        wv_hours.setTypeface(font);
+        wv_minutes.setTypeface(font);
+        wv_seconds.setTypeface(font);
     }
 
     public String getTime() {

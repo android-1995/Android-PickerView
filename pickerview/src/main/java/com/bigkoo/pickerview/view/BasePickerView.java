@@ -96,7 +96,9 @@ public class BasePickerView {
         contentContainer.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                v.performClick();
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.performClick();
+                }
                 return true;
             }
         });

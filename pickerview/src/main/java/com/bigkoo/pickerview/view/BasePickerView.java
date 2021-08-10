@@ -93,6 +93,13 @@ public class BasePickerView {
             contentContainer = (ViewGroup) rootView.findViewById(R.id.content_container);
             contentContainer.setLayoutParams(params);
         }
+        contentContainer.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.performClick();
+                return true;
+            }
+        });
         setKeyBackCancelable(true);
     }
 
@@ -301,7 +308,7 @@ public class BasePickerView {
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
                 dismiss();
             }
-            return false;
+            return true;
         }
     };
 
